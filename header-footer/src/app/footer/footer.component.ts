@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component ,Input ,OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -6,6 +6,13 @@ import { Component } from '@angular/core';
   //styleUrls: ['./footer.component.css']
 })
 
-export class footercomponent{
+export class footercomponent implements OnInit{
     
+  constructor(){
+
+  }
+  ngOnInit(){
+
+  }
+  @Input() ftittle:string;
 }

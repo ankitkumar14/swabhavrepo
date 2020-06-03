@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'header-footer test';
+  header="header message";
+  footer="footer message";
 }
