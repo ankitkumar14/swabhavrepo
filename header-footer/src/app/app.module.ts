@@ -1,22 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule }   from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { child } from './child/child.component';
-import { HighlightDirective } from './highlight.directive';
+import { headercomponent } from './header/header.component';
+import { footercomponent } from './footer/footer.component';
+import { AnkitheaderDirective } from './ankitheader.directive';
+import { AnkitfooterDirective } from './ankitfooter.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    child,
-    HighlightDirective
+    headercomponent,
+    footercomponent,
+    AnkitheaderDirective,
+    AnkitfooterDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
