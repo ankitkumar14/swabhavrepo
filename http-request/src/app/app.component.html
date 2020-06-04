@@ -1,0 +1,9 @@
+<div class="form-group">
+    <label>number</label><br>
+    <input type="number" #num class="form-control" name="num">
+    <button class="btn btn-primary" (click)="dosearch(num.value)">Search</button>
+    <div class="text-center">
+        <p class="lead" *ngIf="loading">Loading...</p>
+      </div>
+    {{t}}
+</div>
