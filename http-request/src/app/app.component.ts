@@ -9,13 +9,18 @@ import { getnumber } from 'src/services/getnumber.service';
 export class AppComponent {
   title = 'http-request';
   loading: boolean = false;
-  n:number;
-  t:any;
+  result:string;
   constructor(private s:getnumber){
   }
   dosearch(num:number){
-    this.n=num;
     this.loading = true;
-    this.t=this.s.search(this.n).then( () => this.loading = false);
+    this.s.search(num).then( (r) =>{ 
+      this.loading = false;
+      this.result=r;
+    })
+    .catch((err)=>{
+      
+    })
+    ;
   }
 }

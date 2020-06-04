@@ -5,23 +5,26 @@ import { HttpClient } from '@angular/common/http';
 
 export class getnumber{
     api:string= 'https://www.numbersapi.com';
-    result:string;
     constructor(private http:HttpClient){
+        //console.log("response");
     }
     search(term:number):Promise<any> {
         let promise=new Promise((resolve, reject)=>{
             let apiurl=`${this.api}/${term}`;
-            this.http.get(apiurl)
+            //console.log(apiurl);
+            this.http.get(apiurl,{responseType: 'json'})
             .toPromise()
             .then(response=>{
-                console.log(JSON.stringify(response));
-                //console.log(response.json());
-                this.result=JSON.stringify(response);
-                resolve();
-            },
-            msg => { // Error
-                reject(msg);
-                });
+                console.log(response);
+                //console.log("response");
+                //this.result=JSON.stringify(response);
+                resolve(response);
+            })
+            .catch((err)=>{
+                console.log(err)
+                //console.log("response");
+                reject(err)
+            })
         }
         );
         return promise;
