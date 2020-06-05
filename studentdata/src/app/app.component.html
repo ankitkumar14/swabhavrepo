@@ -1,14 +1,30 @@
 <div>
   <button class="btn btn-primary" (click)="getstudent()">get student data</button>
 </div>
-<table>
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr>
+        <th>Id</th>
+        <th>Roll No</th>
+        <th>Name</th>
+        <th>age</th>
+        <th>Email</th>
+        <th>Date</th>
+        <th>Gender</th>
+    </tr>
+</thead>
+<div class="text-center">
+  <p class="lead" *ngIf="loading">Loading........</p>
+</div>
+<tbody>
   <tr *ngFor="let result of xtra">
-    <td>{{result.Age}}</td>
-    <td>{{result.Date}}</td>
-    <td>{{result.Email}}</td>
-    <td>{{result.Id}}</td>
-    <td>{{result.Name}}</td>
-    <td>{{result.RollNo}}</td>
-    <td>{{result.isMale}}</td>
+    <td>{{result.id}}</td>
+    <td>{{result.rollNo}}</td>
+    <td>{{result.name}}</td>
+    <td>{{result.age}}</td>
+    <td>{{result.email}}</td>
+    <td>{{result.date}}</td>
+    <td>{{result.isMale}}</td><hr>
   </tr>
+</tbody>
 </table>

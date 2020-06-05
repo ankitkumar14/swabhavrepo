@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { getdata } from 'src/services/getstudentdata.service';
-import { student } from './student';
 
 
 @Component({
@@ -11,14 +10,17 @@ import { student } from './student';
 
 export class AppComponent {
   xtra=[];
+  loading:boolean =false;
   constructor(private s:getdata)
   {
   }
   getstudent(){
-    //this.s.students().then( (r) =>{
-      //console.log("com");
-    //this.data=r;
-    this.s.students();
-    this.xtra=this.s.transfer();
+    this.loading = true;
+    this.s.students().then((result)=>{
+      this.xtra=result;
+      this.loading = false;
+    }).catch((error)=>{
+      console.log(error);
+    })
   }
 }
