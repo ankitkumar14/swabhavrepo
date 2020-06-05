@@ -10,7 +10,6 @@ import { student } from './student';
 })
 
 export class AppComponent {
-  title = 'studentdata';
   xtra=[];
   constructor(private s:getdata)
   {
@@ -19,8 +18,7 @@ export class AppComponent {
     //this.s.students().then( (r) =>{
       //console.log("com");
     //this.data=r;
-    //console.log(this.data[0].Age);
     this.s.students();
-    this.xtra=this.s.tran();
+    this.xtra=this.s.transfer();
   }
 }

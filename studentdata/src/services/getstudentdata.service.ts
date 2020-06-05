@@ -37,10 +37,11 @@ export class getdata{
         }
         )
     });
-    //console.log(this.data[1].Age);
+    
         return promise;
     }
-    tran(){
+    transfer(){
+       
         return this.data;
     }
 }
