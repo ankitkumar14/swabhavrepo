@@ -11,18 +11,14 @@ export class getnumber{
     search(term:number):Promise<any> {
         let promise=new Promise((resolve, reject)=>{
             let apiurl=`${this.api}/${term}`;
-            //console.log(apiurl);
             this.http.get(apiurl,{responseType: 'json'})
             .toPromise()
             .then(response=>{
                 console.log(response);
-                //console.log("response");
-                //this.result=JSON.stringify(response);
                 resolve(response);
             })
             .catch((err)=>{
                 console.log(err)
-                //console.log("response");
                 reject(err)
             })
         }
