@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { getdata } from 'src/services/getstudentdata.service';
+//import { CommonModule } from '@angular/common';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { getdata } from 'src/services/getstudentdata.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    //CommonModule,
+    FontAwesomeModule
   ],
   providers: [getdata],
   bootstrap: [AppComponent]

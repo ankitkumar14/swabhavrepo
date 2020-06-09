@@ -1,6 +1,7 @@
 <div>
-  <button class="btn btn-primary" (click)="getstudent()">get student data</button>
+  <button class="btn btn-danger" (click)="getstudent()">get student data</button>
 </div>
+
 <table class="table table-hover table-bordered">
   <thead>
     <tr>
@@ -19,7 +20,7 @@
 <tbody>
   <tr *ngFor="let result of xtra">
     <td>{{result.id}}</td>
-    <td>{{result.rollNo}}</td>
+    <td>{{result.rollNo}} <i class="fa fa-heart" aria-hidden="true"></i> </td>
     <td>{{result.name}}</td>
     <td>{{result.age}}</td>
     <td>{{result.email}}</td>

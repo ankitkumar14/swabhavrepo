@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "studentdata": {
+    "students": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/studentdata",
+            "outputPath": "dist/students",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -25,8 +25,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/font-awesome/css/font-awesome.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
@@ -64,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "studentdata:build"
+            "browserTarget": "students:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "studentdata:build:production"
+              "browserTarget": "students:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "studentdata:build"
+            "browserTarget": "students:build"
           }
         },
         "test": {
@@ -112,19 +111,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "studentdata:serve"
+            "devServerTarget": "students:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "studentdata:serve:production"
+              "devServerTarget": "students:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "studentdata",
+  "defaultProject": "students",
   "cli": {
-    "analytics": "45a14719-6261-4f5d-8eb4-792ecbcfe41f"
+    "analytics": "47322e03-596d-4a3e-a365-65e421d1db91"
   }
 }
