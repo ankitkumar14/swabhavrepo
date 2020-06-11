@@ -1,0 +1,28 @@
+<ion-toolbar>
+  <ion-title>Name Matching</ion-title>
+</ion-toolbar>
+<ion-content fullscreen>
+<form>
+<ion-item>
+      <ion-label position="floating">Name1:</ion-label>
+      <ion-input type="text" [(ngModel)]="name1" name="name1"></ion-input>
+</ion-item>
+  <ion-item>
+      <ion-label position="floating">Name2:</ion-label>
+      <ion-input type="text" [(ngModel)]="name2" name="name2" (ionChange)=showval()></ion-input>
+  </ion-item>
+</form>
+<!--<ion-button color="primary" (click)="match()" >find match</ion-button>-->
+<!--<div *ngIf="show" >-->
+<div>
+<style>
+  h1 {text-align: center;}
+</style>
+<h1>{{name1}}</h1>
+<h1>&#10084;</h1>
+<h1>{{name2}}</h1>
+<h1>PERSENTEGE:{{ans}}</h1>
+</div>
+
+</ion-content>
+
