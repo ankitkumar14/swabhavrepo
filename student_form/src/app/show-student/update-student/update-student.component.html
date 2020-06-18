@@ -1,0 +1,42 @@
+<ion-content>
+  <div class="loader" *ngIf="loader">
+    
+  </div>
+
+  <form >
+     
+    <ion-item>
+        <ion-label position="stacked" color="primary">roll no</ion-label>
+        <ion-input type="number" [(ngModel)]="studentdata.rollNo" name="rollno"  required>
+        </ion-input>
+    </ion-item>  
+    <ion-item>
+        <ion-label position="stacked" color="primary">name</ion-label>
+        <ion-input type="text" name="name" [(ngModel)]="studentdata.name"  required>
+        </ion-input>
+    </ion-item>
+    <ion-item>  
+        <ion-label position="stacked" color="primary">age</ion-label>
+        <ion-input type="number" [(ngModel)]="studentdata.age" name="age" required>
+        </ion-input>
+      </ion-item>
+    <ion-item>
+        <ion-label position="stacked" color="primary">email</ion-label>
+        <ion-input type="text" [(ngModel)]="studentdata.email" name="email" required>
+        </ion-input>
+      </ion-item>
+    <ion-item> 
+        <ion-label position="stacked" color="primary">date</ion-label>
+        <ion-input  type="date" [(ngModel)]="studentdata.date" name="date" required>
+        </ion-input>
+      </ion-item>
+    <ion-item>  
+        <ion-label position="stacked" color="primary">isMale</ion-label>
+        <ion-input type="text" [(ngModel)]="studentdata.isMale" name="gender" required>
+        </ion-input>
+      </ion-item>
+      
+    <ion-button color="primary" (click)="onSubmit()" >submit</ion-button>
+  </form>
+
+</ion-content>

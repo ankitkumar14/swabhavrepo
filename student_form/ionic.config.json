@@ -1,0 +1,7 @@
+{
+  "name": "student_form",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
