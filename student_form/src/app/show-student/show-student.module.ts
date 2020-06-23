@@ -9,6 +9,7 @@ import { ShowStudentPageRoutingModule } from './show-student-routing.module';
 import { ShowStudentPage } from './show-student.page';
 import { HttpClientModule } from '@angular/common/http';
 import { UpdateStudentComponent } from './update-student/update-student.component';
+import { HTTP } from '@ionic-native/http/ngx';
 
 @NgModule({
   imports: [
@@ -16,8 +17,9 @@ import { UpdateStudentComponent } from './update-student/update-student.componen
     FormsModule,
     IonicModule,
     ShowStudentPageRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  declarations: [ShowStudentPage,UpdateStudentComponent]
+  declarations: [ShowStudentPage,UpdateStudentComponent],
+  providers:[HTTP]
 })
 export class ShowStudentPageModule {}

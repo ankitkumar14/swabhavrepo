@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>history</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1>Available balance={{balance}}</h1>
+  <table class="table table-hover table-bordered">
+    
+    <tr *ngFor="let result of history">
+      <td>{{result}}</td>
+    </tr>
+  </table>
+  
+</ion-content>

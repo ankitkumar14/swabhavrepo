@@ -1,13 +1,15 @@
+
 <ion-header>
   <ion-toolbar>
     <ion-title>showStudent</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content scrollX="true">
   <div class="loader"  *ngIf="loader">
 
   </div>
+  
   <table class="table table-hover table-bordered" *ngIf="!loader">
       <thead>
         <tr>
@@ -38,6 +40,6 @@
       </tr>
     </tbody>
     </table>
-    
+
 </ion-content>
 <router-outlet></router-outlet>

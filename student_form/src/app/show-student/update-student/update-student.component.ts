@@ -24,8 +24,9 @@ export class UpdateStudentComponent implements OnInit {
   studentdata=new student;
   getStudentById(id){
     this.s.getStudentById(id).then((result)=>{
-      this.studentlist=result;
-      this.studentdata=result[0];
+      this.studentlist=JSON.parse(result.data);
+      
+      this.studentdata=this.studentlist[0]
       this.loader=false;
       console.log(this.studentlist);
     }).catch((error)=>{

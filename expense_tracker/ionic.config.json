@@ -1,0 +1,7 @@
+{
+  "name": "expense_tracker",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

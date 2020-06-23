@@ -688,40 +688,26 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         this.http = http;
         this.nativehttp = nativehttp;
-        this.api = "http://gsmktg.azurewebsites.net/api/v1/techlabs/test/students";
+        this.api = "https://gsmktg.azurewebsites.net/api/v1/techlabs/test/students";
       }
 
       _createClass(GetdataService, [{
         key: "students",
         value: function students() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-            var _this2 = this;
+          var _this2 = this;
 
-            var promise;
-            return regeneratorRuntime.wrap(function _callee$(_context) {
-              while (1) {
-                switch (_context.prev = _context.next) {
-                  case 0:
-                    promise = new Promise(function (resolve, reject) {
-                      _this2.nativehttp.get(_this2.api, {}, {
-                        responseType: 'json'
-                      }).then(function (response) {
-                        console.log(response.data);
-                        resolve(response);
-                      })["catch"](function (err) {
-                        console.log(err);
-                        reject(err);
-                      });
-                    });
-                    return _context.abrupt("return", promise);
-
-                  case 2:
-                  case "end":
-                    return _context.stop();
-                }
-              }
-            }, _callee);
-          }));
+          var promise = new Promise(function (resolve, reject) {
+            _this2.nativehttp.get(_this2.api, {}, {
+              responseType: 'json'
+            }).then(function (response) {
+              console.log(response.data);
+              resolve(response);
+            })["catch"](function (err) {
+              console.log(err);
+              reject(err);
+            });
+          });
+          return promise;
         }
       }, {
         key: "addstudent",

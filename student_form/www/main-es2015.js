@@ -719,23 +719,21 @@ let GetdataService = class GetdataService {
     constructor(http, nativehttp) {
         this.http = http;
         this.nativehttp = nativehttp;
-        this.api = "http://gsmktg.azurewebsites.net/api/v1/techlabs/test/students";
+        this.api = "https://gsmktg.azurewebsites.net/api/v1/techlabs/test/students";
     }
     students() {
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            let promise = new Promise((resolve, reject) => {
-                this.nativehttp.get(this.api, {}, { responseType: 'json' })
-                    .then((response) => {
-                    console.log(response.data);
-                    resolve(response);
-                })
-                    .catch((err) => {
-                    console.log(err);
-                    reject(err);
-                });
+        let promise = new Promise((resolve, reject) => {
+            this.nativehttp.get(this.api, {}, { responseType: 'json' })
+                .then((response) => {
+                console.log(response.data);
+                resolve(response);
+            })
+                .catch((err) => {
+                console.log(err);
+                reject(err);
             });
-            return promise;
         });
+        return promise;
     }
     addstudent(studentdata) {
         let promise = new Promise((resolve, reject) => {

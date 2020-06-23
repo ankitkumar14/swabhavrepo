@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>expense</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  total saving={{totalSaving}}
+  <br>
+  <br>
+  total expense={{totalExpense}}
+  <br><br>
+  remaining amount={{currentSaving}}
+  <br>
+  <br>
+  <ion-button [routerLink]="['./addExpense']">ADD expense</ion-button>
+</ion-content>

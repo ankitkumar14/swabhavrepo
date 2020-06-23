@@ -12,10 +12,12 @@ export class ShowStudentPage implements OnInit {
 
   loader:boolean=true;
   studentlist=[];
+
   ngOnInit(): void {
     
     this.s.students().then((result)=>{
-      this.studentlist=result;
+      this.studentlist=JSON.parse(result.data);
+      console.log(this.studentlist);
       this.loader = false;
     }).catch((error)=>{
       console.log(error);

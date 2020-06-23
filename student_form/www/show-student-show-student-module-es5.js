@@ -41,7 +41,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-header>\n  <ion-toolbar>\n    <ion-title>showStudent</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <div class=\"loader\"  *ngIf=\"loader\">\n\n  </div>\n  <table class=\"table table-hover table-bordered\" *ngIf=\"!loader\">\n      <thead>\n        <tr>\n            <th>Id</th>\n            <th>Roll No</th>\n            <th>Name</th>\n            <th>age</th>\n            <th>Email</th>\n            <th>Date</th>\n            <th>Gender</th>\n            <th>update</th>\n            <th>delete</th>\n        </tr>\n    </thead>\n    <tbody>\n      <tr *ngFor=\"let result of studentlist\">\n        <td>{{result.id}}</td>\n        <td>{{result.rollNo}}</td>\n        <td>{{result.name}}</td>\n        <td>{{result.age}}</td>\n        <td>{{result.email}}</td>\n        <td>{{result.date}}</td>\n        <td><div *ngIf=\"result.isMale ; else elseBlock\">male</div>\n        <ng-template #elseBlock>female</ng-template></td>\n        <td><ion-button href=\"/show-student/delete/{{result.id}}\" ><ion-icon name=\"create-outline\"></ion-icon></ion-button></td>\n        <td><ion-button href=\"/show-student/{{result.id}}\" ><ion-icon name=\"trash-outline\"></ion-icon></ion-button></td>\n        <hr>\n      </tr>\n    </tbody>\n    </table>\n    \n</ion-content>\n<router-outlet></router-outlet>\n";
+    __webpack_exports__["default"] = "\n<ion-header>\n  <ion-toolbar>\n    <ion-title>showStudent</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content scrollX=\"true\">\n  <div class=\"loader\"  *ngIf=\"loader\">\n\n  </div>\n  \n  <table class=\"table table-hover table-bordered\" *ngIf=\"!loader\">\n      <thead>\n        <tr>\n            <th>Id</th>\n            <th>Roll No</th>\n            <th>Name</th>\n            <th>age</th>\n            <th>Email</th>\n            <th>Date</th>\n            <th>Gender</th>\n            <th>update</th>\n            <th>delete</th>\n        </tr>\n    </thead>\n    <tbody>\n      <tr *ngFor=\"let result of studentlist\">\n        <td>{{result.id}}</td>\n        <td>{{result.rollNo}}</td>\n        <td>{{result.name}}</td>\n        <td>{{result.age}}</td>\n        <td>{{result.email}}</td>\n        <td>{{result.date}}</td>\n        <td><div *ngIf=\"result.isMale ; else elseBlock\">male</div>\n        <ng-template #elseBlock>female</ng-template></td>\n        <td><ion-button href=\"/show-student/delete/{{result.id}}\" ><ion-icon name=\"create-outline\"></ion-icon></ion-button></td>\n        <td><ion-button href=\"/show-student/{{result.id}}\" ><ion-icon name=\"trash-outline\"></ion-icon></ion-button></td>\n        <hr>\n      </tr>\n    </tbody>\n    </table>\n\n</ion-content>\n<router-outlet></router-outlet>\n";
     /***/
   },
 
@@ -61,7 +61,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-content>\n  <div class=\"loader\" *ngIf=\"loader\">\n    \n  </div>\n\n  <form >\n     \n    <ion-item>\n        <ion-label position=\"stacked\" color=\"primary\">roll no</ion-label>\n        <ion-input type=\"number\" [(ngModel)]=\"studentdata.rollNo\" name=\"rollno\"  required>\n        </ion-input>\n    </ion-item>  \n    <ion-item>\n        <ion-label position=\"stacked\" color=\"primary\">name</ion-label>\n        <ion-input type=\"text\" name=\"name\" [(ngModel)]=\"studentdata.name\"  required>\n        </ion-input>\n    </ion-item>\n    <ion-item>  \n        <ion-label position=\"stacked\" color=\"primary\">age</ion-label>\n        <ion-input type=\"number\" [(ngModel)]=\"studentdata.age\" name=\"age\" required>\n        </ion-input>\n      </ion-item>\n    <ion-item>\n        <ion-label position=\"stacked\" color=\"primary\">email</ion-label>\n        <ion-input type=\"text\" [(ngModel)]=\"studentdata.email\" name=\"email\" required>\n        </ion-input>\n      </ion-item>\n    <ion-item> \n        <ion-label position=\"stacked\" color=\"primary\">date</ion-label>\n        <ion-input  type=\"date\" [(ngModel)]=\"studentdata.date\" name=\"date\" required>\n        </ion-input>\n      </ion-item>\n    <ion-item>  \n        <ion-label position=\"stacked\" color=\"primary\">isMale</ion-label>\n        <ion-input type=\"text\" [(ngModel)]=\"studentdata.isMale\" name=\"gender\" required>\n        </ion-input>\n      </ion-item>\n      \n    <ion-button color=\"primary\" (click)=\"onSubmit()\" >submit</ion-button>\n  </form>\n\n</ion-content>\n";
+    __webpack_exports__["default"] = "<ion-content>\n  <div class=\"loader\"  *ngIf=\"loader\">\n\n  </div>\n\n  <form >\n     \n    <ion-item>\n        <ion-label position=\"stacked\" color=\"primary\">roll no</ion-label>\n        <ion-input type=\"number\" [(ngModel)]=\"studentdata.rollNo\" name=\"rollNo\"  required>\n        </ion-input>\n    </ion-item>  \n    <ion-item>\n        <ion-label position=\"stacked\" color=\"primary\">name</ion-label>\n        <ion-input type=\"text\" name=\"name\" [(ngModel)]=\"studentdata.name\"  required>\n        </ion-input>\n    </ion-item>\n    <ion-item>  \n        <ion-label position=\"stacked\" color=\"primary\">age</ion-label>\n        <ion-input type=\"number\" [(ngModel)]=\"studentdata.age\" name=\"age\" required>\n        </ion-input>\n      </ion-item>\n    <ion-item>\n        <ion-label position=\"stacked\" color=\"primary\">email</ion-label>\n        <ion-input type=\"text\" [(ngModel)]=\"studentdata.email\" name=\"email\" required>\n        </ion-input>\n      </ion-item>\n    <ion-item> \n        <ion-label position=\"stacked\" color=\"primary\">date</ion-label>\n        <ion-input  type=\"date\" [(ngModel)]=\"studentdata.date\" name=\"date\" required>\n        </ion-input>\n      </ion-item>\n    <ion-item>  \n        <ion-label position=\"stacked\" color=\"primary\">isMale</ion-label>\n        <ion-input type=\"text\" [(ngModel)]=\"studentdata.isMale\" name=\"gender\" required>\n        </ion-input>\n      </ion-item>\n      \n    <ion-button color=\"primary\" (click)=\"onSubmit()\" >submit</ion-button>\n  </form>\n\n</ion-content>\n";
     /***/
   },
 
@@ -328,6 +328,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _update_student_update_student_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
     /*! ./update-student/update-student.component */
     "./src/app/show-student/update-student/update-student.component.ts");
+    /* harmony import */
+
+
+    var _ionic_native_http_ngx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    /*! @ionic-native/http/ngx */
+    "./node_modules/@ionic-native/http/__ivy_ngcc__/ngx/index.js");
 
     var ShowStudentPageModule = function ShowStudentPageModule() {
       _classCallCheck(this, ShowStudentPageModule);
@@ -335,7 +341,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     ShowStudentPageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
       imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _show_student_routing_module__WEBPACK_IMPORTED_MODULE_5__["ShowStudentPageRoutingModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"]],
-      declarations: [_show_student_page__WEBPACK_IMPORTED_MODULE_6__["ShowStudentPage"], _update_student_update_student_component__WEBPACK_IMPORTED_MODULE_8__["UpdateStudentComponent"]]
+      declarations: [_show_student_page__WEBPACK_IMPORTED_MODULE_6__["ShowStudentPage"], _update_student_update_student_component__WEBPACK_IMPORTED_MODULE_8__["UpdateStudentComponent"]],
+      providers: [_ionic_native_http_ngx__WEBPACK_IMPORTED_MODULE_9__["HTTP"]]
     })], ShowStudentPageModule);
     /***/
   },
@@ -413,7 +420,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           var _this2 = this;
 
           this.s.students().then(function (result) {
-            _this2.studentlist = result;
+            _this2.studentlist = JSON.parse(result.data);
+            console.log(_this2.studentlist);
             _this2.loader = false;
           })["catch"](function (error) {
             console.log(error);
@@ -537,8 +545,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           var _this3 = this;
 
           this.s.getStudentById(id).then(function (result) {
-            _this3.studentlist = result;
-            _this3.studentdata = result[0];
+            _this3.studentlist = JSON.parse(result.data);
+            _this3.studentdata = _this3.studentlist[0];
             _this3.loader = false;
             console.log(_this3.studentlist);
           })["catch"](function (error) {
