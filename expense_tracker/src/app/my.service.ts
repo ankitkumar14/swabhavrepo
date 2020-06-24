@@ -12,7 +12,7 @@ export class MyService {
   constructor(private storage: Storage) { 
   }
   addSaving(amount){
-    
+    //localStorage.clear()
     this.str="you added "+JSON.stringify(amount);
     this.arr=JSON.parse(localStorage.getItem('history'));
     if(this.arr==null){
@@ -27,7 +27,7 @@ export class MyService {
       localStorage.setItem('history',JSON.stringify(this.arr));
     }
     localStorage.setItem('totalSaving',amount+JSON.parse(localStorage.getItem('totalSaving')));
-    localStorage.setItem('currentSaving',JSON.parse(localStorage.getItem('totalSaving')));
+    localStorage.setItem('currentSaving',amount+JSON.parse(localStorage.getItem('currentSaving')));
     //localStorage.clear();
   }
   getCurrentSaving(): number {
